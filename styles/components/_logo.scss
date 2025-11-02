@@ -1,0 +1,9 @@
+@use "../mixins" as mix;
+
+.logo {
+   @include mix.fluid-text(24, 32);
+
+   font-weight: 500;
+   text-transform: uppercase;
+   text-decoration: none;
+}

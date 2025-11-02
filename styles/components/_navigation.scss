@@ -1,0 +1,8 @@
+@use "../mixins" as mix;
+
+.nav {
+   &__list {
+      @include mix.flex-center;
+      column-gap: 20px;
+   }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>PROJECTS</title>
+   <link rel="shortcut icon" href="../assets/img/logo.ico" type="image/x-icon" />
+   <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+   <header class="header">
+      <div class="header-wrapper">
+         <a href="../index.html" class="header__logo logo">L1per</a>
+         <nav class="nav">
+            <ul class="nav__list">
+               <li><a href="../index.html">Главная</a></li>
+               <li><a href="./projects.html" class="active">Проекты</a></li>
+               <li><a href="./dairy.html">Дневник</a></li>
+               <li><a href="./contacts.html">Контакты</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+   <main class="content">
+      <section class="projects container">
+         <h1 class="projects__title-new">Мои проекты</h1>
+         <p class="projects__subtitle">Полная коллекция учебных и личных работ.</p>
+
+         <div class="projects__filter-header">
+            <button id="filter-toggle" class="button filter-btn">Фильтры ▾</button>
+         </div>
+
+         <div class="projects-filter hidden" id="projects-filter">
+            <form id="project-filter-form" class="projects-filter__form">
+               <label><input type="radio" name="category" value="all" checked> Все проекты</label>
+               <label><input type="radio" name="category" value="layout"> Верстка</label>
+               <label><input type="radio" name="category" value="linux"> Linux / Ubuntu</label>
+               <label><input type="radio" name="category" value="portfolio"> Портфолио</label>
+               <label><input type="radio" name="category" value="practice"> Учебные</label>
+            </form>
+         </div>
+
+         <div class="projects__grid">
+            <article class="project-card" data-category="layout">
+               <img src="../assets/img/project1.png" alt="Landing Page" class="project-card__img" />
+               <div class="project-card__content">
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title">Landing Page</h3>
+                  <p class="project-card__desc">
+                     Одностраничный сайт для бренда. Адаптивная верстка и плавные анимации.
+                  </p>
+               </div>
+            </article>
+
+            <article class="project-card" data-category="linux">
+               <img src="../assets/img/project2.png" alt="Customization Repo" class="project-card__img" />
+               <div class="project-card__content">
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title">Customization Repo</h3>
+                  <p class="project-card__desc">
+                     Репозиторий с инструкцией по кастомизации Ubuntu и конфигурации рабочего окружения.
+                  </p>
+               </div>
+            </article>
+
+            <article class="project-card" data-category="portfolio layout">
+               <img src="../assets/img/project3.png" alt="Portfolio Website" class="project-card__img" />
+               <div class="project-card__content">
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title">Portfolio Website</h3>
+                  <p class="project-card__desc">
+                     Личный сайт-портфолио на SCSS и компонентной структуре. Полностью адаптивен.
+                  </p>
+               </div>
+            </article>
+
+            <article class="project-card" data-category="practice">
+               <img src="../assets/img/project4.png" alt="FrontPractise" class="project-card__img" />
+               <div class="project-card__content">
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title">FrontPractise</h3>
+                  <p class="project-card__desc">
+                     Учебный репозиторий с материалами и кодом по HTML, CSS, SCSS и JS.
+                  </p>
+               </div>
+            </article>
+         </div>
+      </section>
+
+   </main>
+
+   <div class="project-modal" id="project-modal">
+      <div class="project-modal__content">
+         <button class="project-modal__close" id="modal-close">×</button>
+         <img src="" alt="Скриншот проекта" class="project-modal__img" />
+         <h3 class="project-modal__title"></h3>
+         <p class="project-modal__desc"></p>
+         <a href="" target="_blank" class="button" id="modal-code">Исходный код</a>
+      </div>
+   </div>
+
+   <footer class="footer">
+      <ul class="footer__menu">
+         <li>
+            <p class="footer__desc">© 2025–2026 гг. Все права защищены</p>
+         </li>
+         <li><a href="" class="footer__link">github.com</a></li>
+      </ul>
+   </footer>
+
+   <script src="../scripts/main.js"></script>
+</body>
+
+</html>

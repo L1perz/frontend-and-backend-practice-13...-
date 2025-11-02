@@ -1,0 +1,20 @@
+@use "./font";
+@use "./root";
+@use "./normalize";
+@use "./base";
+@use "./mixins";
+@use "./media";
+
+@use "./components/logo";
+@use "./components/navigation";
+@use "./components/container";
+@use "./components/button";
+@use "./components/header";
+@use "./components/content";
+@use "./components/resume";
+@use "./components/skills";
+@use "./components/best-projects";
+@use "./components/projects-page";
+@use "./components/contacts";
+@use "./components/dairy";
+@use "./components/footer";

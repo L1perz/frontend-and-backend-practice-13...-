@@ -1,0 +1,24 @@
+@use "../mixins" as mix;
+
+.footer {
+   @include mix.flex-center;
+   column-gap: 20px;
+   max-height: 75px;
+   height: 100%;
+
+   margin-top: auto;
+   padding-block: 10px;
+
+   background-color: var(--color-section);
+
+   &__menu {
+      @include mix.flex-center;
+
+      flex-direction: column;
+      row-gap: 5px;
+   }
+
+   &__link {
+     @include mix.flex-center;
+   }
+}

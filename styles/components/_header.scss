@@ -1,0 +1,13 @@
+@use "../mixins" as mix;
+
+.header{
+   height: 80px;
+   background-color: var(--color-section);
+
+   &-wrapper {
+      @include mix.flex-center;
+      flex-direction: column;
+
+      height: 100%;
+   }
+}
