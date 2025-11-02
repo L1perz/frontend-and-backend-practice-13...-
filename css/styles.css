@@ -14,13 +14,13 @@
   font-display: swap;
 }
 :root {
-  --color-bg: #f3eee7;
+  --color-bg: #e7eef3;
   --color-bg-alt: #ffffff;
-  --color-primary: #d98324;
+  --color-primary: #245ad9;
   --color-accent: #a23b72;
-  --color-hover: #3b3a36;
-  --color-muted: #55534e;
-  --color-section: #d9cfc3;
+  --color-hover: #363b3b;
+  --color-muted: #4e5355;
+  --color-section: #c3d5d9;
   --font-family: "Montserrat", sans-serif;
   --link-height: 20px;
 }
