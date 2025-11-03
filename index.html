@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
    <title>MAIN</title>
-   <link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="./images/photo.png" type="image/x-icon">
    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -27,14 +27,15 @@
    <main class="content">
       <section class="resume container">
          <div class="resume-info">
-            <img src="./assets/img/logo.jpg" alt="Логотип L1per" height="100" width="80" class="resume__image">
+            <img src="./images/photo.png" alt="Логотип L1per" height="100" width="80" class="resume__image">
             <div class="resume-wrapper">
                <div class="description">
                   <p><strong>Имя:</strong> Карчевский Лев</p>
                   <p><strong>Группа:</strong> ЭФБО-05-24</p>
                   <p>Описание</p>
+                  <p>Backend-разработчик (C++) в МТС, студент МИРЭА.</p>
                </div>
-               <a href="./assets/files/resume.html" class="resume__button button" download="resume.html">Скачать резюме</a>
+               <a href="./assets/resume.html" class="resume__button button" download="resume.html">Скачать резюме</a>
 
             </div>
          </div>
@@ -45,9 +46,9 @@
          <div class="skill">
             <span class="skill__name">HTML/CSS</span>
             <div class="skill__progress">
-               <div class="progress__bar" style="width: 90%;"></div>
+               <div class="progress__bar" style="width: 70%;"></div>
             </div>
-            <div class="skill__percent">90%</div>
+            <div class="skill__percent">70%</div>
             <span class="skill__name">JavaScript</span>
             <div class="skill__progress">
                <div class="progress__bar" style="width: 50%;"></div>
@@ -55,14 +56,14 @@
             <div class="skill__percent">50%</div>
             <span class="skill__name">Bootstrap</span>
             <div class="skill__progress">
-               <div class="progress__bar" style="width: 10%;"></div>
+               <div class="progress__bar" style="width: 20%;"></div>
             </div>
-            <div class="skill__percent">10%</div>
+            <div class="skill__percent">20%</div>
             <span class="skill__name">React</span>
             <div class="skill__progress">
-               <div class="progress__bar" style="width: 10%;"></div>
+               <div class="progress__bar" style="width: 5%;"></div>
             </div>
-            <div class="skill__percent">10%</div>
+            <div class="skill__percent">5%</div>
          </div>
       </section>
 
@@ -70,38 +71,27 @@
          <h2 class="projects__title">Лучшие проекты</h2>
 
          <div class="projects__grid">
-            <!-- <article class="project-card">
-               <img src="./assets/img/project1.png" alt="Проект 1" class="project-card__img">
+            <article class="project-card" data-category="js">
+               <img src="./images/project1.jpg" alt="Calculator" class="project-card__img" />
                <div class="project-card__content">
-                  <h3 class="project-card__title">Landing Page</h3>
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title"> </h3>
                   <p class="project-card__desc">
-                     Одностраничный сайт для вымышленного бренда. Адаптивная вёрстка, плавные анимации и чистый код.
+                     Калькулятор реализованный на языке js.
                   </p>
-                  <a href="./pages/projects.html" class="project-card__btn button">Подробнее</a>
                </div>
             </article>
 
-            <article class="project-card">
-               <img src="./assets/img/project2.png" alt="Проект 2" class="project-card__img">
+            <article class="project-card" data-category="cpp">
+               <img src="./images/project2.jpg" alt="Checkers" class="project-card__img" />
                <div class="project-card__content">
-                  <h3 class="project-card__title">Customization Repo</h3>
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title"> Checkers</h3>
                   <p class="project-card__desc">
-                     Репозиторий на гитхабе с подробной инструкцией для настройки и кастомизации убунту в собственном стиле.
+                     Программная версия игры шашек. Написанна на C++ c использованием QT.
                   </p>
-                  <a href="./pages/projects.html" class="project-card__btn button">Подробнее</a>
                </div>
             </article>
-
-            <article class="project-card">
-               <img src="./assets/img/project3.png" alt="Проект 3" class="project-card__img">
-               <div class="project-card__content">
-                  <h3 class="project-card__title">Portfolio Website</h3>
-                  <p class="project-card__desc">
-                     Личный сайт-портфолио с использованием SCSS и компонентной структуры. Полностью адаптивен.
-                  </p>
-                  <a href="./pages/projects.html" class="project-card__btn button">Подробнее</a>
-               </div>
-            </article> -->
          </div>
       </section>
 

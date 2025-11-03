@@ -4,319 +4,39 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-   <title>SSSELERY | MAIN</title>
-   <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
+   <title>MAIN</title>
+   <link rel="shortcut icon" href="./images/photo.png" type="image/x-icon">
+   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-   <style>
-      @font-face {
-         font-family: "Montserrat";
-         src: url("../fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"), url("../assets/fonts/Montserrat/Montserrat-Medium.woff") format("woff"), url("../assets/fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
-         font-weight: 500;
-         font-style: normal;
-         font-display: swap;
-      }
-
-      @font-face {
-         font-family: "Montserrat";
-         src: url("../fonts/Montserrat/Montserrat-Bold.woff2") format("woff2"), url("../assets/fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
-         font-weight: 700;
-         font-style: normal;
-         font-display: swap;
-      }
-
-      body {
-         display: flex;
-         flex-direction: column;
-         font-size: 16px;
-         background-color: var(--color-bg);
-         color: var(--color-text);
-         font-family: var(--font-family);
-         font-weight: 400;
-         line-height: 1.6;
-      }
-
-      a {
-         display: flex;
-         color: var(--color-dark);
-         text-decoration: underline;
-         transition: color 0.2s ease;
-      }
-
-      a:hover {
-         color: var(--color-hover);
-      }
-
-      .logo {
-         font-size: clamp(24px, 24px + (32 - 24) * (100vw - 400px) / 1520, 32px);
-         font-weight: 500;
-         text-transform: uppercase;
-         text-decoration: none;
-      }
-
-      .header {
-         height: 80px;
-         background-color: var(--color-section);
-      }
-
-      .header-wrapper {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
-         height: 100%;
-      }
-
-      .content {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         margin-top: 30px;
-      }
-
-      .footer {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         -moz-column-gap: 20px;
-         column-gap: 20px;
-         max-height: 75px;
-         height: 100%;
-         margin-top: auto;
-         padding-block: 10px;
-         background-color: var(--color-section);
-      }
-
-      .footer__menu {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
-         row-gap: 5px;
-      }
-
-      .footer__link {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-      }
-
-      .container {
-         max-width: 1000px;
-         width: 100%;
-
-         padding: 20px 30px;
-         margin: 0 20px 30px;
-
-         background-color: var(--color-bg-alt);
-         border-radius: 12px;
-      }
-
-      .button {
-         display: flex;
-         align-self: center;
-         background-color: var(--color-hover);
-         color: var(--color-bg-alt);
-         border: none;
-         border-radius: 8px;
-         padding: 10px 20px;
-         font-weight: 500;
-         cursor: pointer;
-         transition: background 0.3s ease;
-
-         &:hover {
-            background-color: var(--color-muted);
-         }
-      }
-
-      .resume {
-         display: flex;
-         border-radius: 12px;
-         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-
-      .resume__image {
-         width: 200px;
-         aspect-ratio: 1;
-         -o-object-fit: cover;
-         object-fit: cover;
-         border-radius: 12px;
-         border: 2px solid var(--color-border);
-      }
-
-      .resume-info {
-         display: flex;
-         justify-content: space-between;
-         width: 100%;
-         padding-inline: 20px;
-      }
-
-      .resume-wrapper {
-         display: flex;
-         flex-direction: column;
-         align-items: end;
-         justify-content: space-between;
-         gap: 15px;
-         max-width: 500px;
-      }
-
-      .resume-wrapper p {
-         font-size: 18px;
-         text-align: center;
-         line-height: 1.5;
-         color: var(--color-text);
-         margin: 0;
-      }
-
-      .description {
-         display: flex;
-         flex-direction: column;
-         gap: 10px;
-      }
-
-      .skills {
-         background-color: var(--color-bg-alt);
-         border-radius: 12px;
-         padding: 20px;
-         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-
-      .skills h2 {
-         font-size: 24px;
-         font-weight: 700;
-         text-align: center;
-         color: var(--color-text);
-      }
-
-      .skills .skill {
-         display: flex;
-         flex-direction: column;
-         gap: 10px;
-      }
-
-      .skills .skill__name {
-         font-weight: 600;
-         color: var(--color-text);
-      }
-
-      .skills .skill__progress {
-         position: relative;
-         width: 100%;
-         height: 16px;
-         background-color: var(--color-border);
-         border-radius: 8px;
-         overflow: hidden;
-      }
-
-      .skills .progress__bar {
-         height: 100%;
-         background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-         border-radius: 8px;
-         transition: width 0.6s ease-in-out;
-      }
-
-      .skills .skill__percent {
-         align-self: flex-end;
-         font-weight: 600;
-         font-size: 14px;
-         color: var(--color-text);
-      }
-
-      .projects {
-         background-color: var(--color-bg-alt);
-         border-radius: 12px;
-         padding: 30px;
-         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-
-      .projects__title {
-         font-size: 24px;
-         font-weight: 700;
-         color: var(--color-text);
-         text-align: center;
-         margin-bottom: 30px;
-      }
-
-      .projects__grid {
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-         gap: 25px;
-      }
-
-      .project-card {
-         display: flex;
-         flex-direction: column;
-         background-color: var(--color-bg);
-         border-radius: 10px;
-         overflow: hidden;
-         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-         transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .project-card:hover {
-         transform: translateY(-5px);
-         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-      }
-
-      .project-card__img {
-         width: 100%;
-         height: 280px;
-         -o-object-fit: cover;
-         object-fit: cover;
-         padding: 20px;
-         border-radius: 7px;
-      }
-
-      .project-card__content {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         padding: 20px;
-         flex-grow: 1;
-      }
-
-      .project-card__title {
-         font-size: 18px;
-         font-weight: 700;
-         margin-bottom: 10px;
-         color: var(--color-text);
-      }
-
-      .project-card__desc {
-         font-size: 15px;
-         line-height: 1.5;
-         color: var(--color-muted);
-         margin-bottom: 15px;
-         text-align: center;
-      }
-
-      .project-card__btn {
-         display: flex;
-         text-decoration: none;
-         margin-top: auto;
-      }
-
-      .project-card__btn:hover {
-         color: var(--color-bg-alt);
-      }
-   </style>
    <header class="header">
       <div class="header-wrapper">
-         <a href="index.html" class="header__logo logo">ssselery</a>
+         <a href="index.html" class="header__logo logo">L1per</a>
+         <nav class="nav">
+            <ul class="nav__list">
+               <li class="nav__item"><a href="index.html">Главная</a></li>
+               <li class="nav__item"><a href="pages/projects.html">Проекты</a></li>
+               <li class="nav__item"><a href="pages/dairy.html">Дневник</a></li>
+               <li class="nav__item"><a href="pages/contacts.html">Контакты</a></li>
+            </ul>
+         </nav>
       </div>
    </header>
 
    <main class="content">
       <section class="resume container">
          <div class="resume-info">
-            <img src="./assets/img/logo.jpg" alt="Логотип ssselery" height="100" width="80" class="resume__image">
+            <img src="./images/photo.png" alt="Логотип L1per" height="100" width="80" class="resume__image">
             <div class="resume-wrapper">
                <div class="description">
-                  <p><strong>Имя:</strong> Коржнев Максим</p>
+                  <p><strong>Имя:</strong> Карчевский Лев</p>
                   <p><strong>Группа:</strong> ЭФБО-05-24</p>
-                  <p>Увлекаюсь веб-разработкой и стремлюсь стать Junior Frontend Developer.</p>
+                  <p>Описание</p>
+                  <p>Backend-разработчик (C++) в МТС, студент МИРЭА.</p>
                </div>
+               <a href="./assets/resume.html" class="resume__button button" download="resume.html">Скачать резюме</a>
+
             </div>
          </div>
       </section>
@@ -326,9 +46,9 @@
          <div class="skill">
             <span class="skill__name">HTML/CSS</span>
             <div class="skill__progress">
-               <div class="progress__bar" style="width: 90%;"></div>
+               <div class="progress__bar" style="width: 70%;"></div>
             </div>
-            <div class="skill__percent">90%</div>
+            <div class="skill__percent">70%</div>
             <span class="skill__name">JavaScript</span>
             <div class="skill__progress">
                <div class="progress__bar" style="width: 50%;"></div>
@@ -336,14 +56,14 @@
             <div class="skill__percent">50%</div>
             <span class="skill__name">Bootstrap</span>
             <div class="skill__progress">
-               <div class="progress__bar" style="width: 10%;"></div>
+               <div class="progress__bar" style="width: 20%;"></div>
             </div>
-            <div class="skill__percent">10%</div>
+            <div class="skill__percent">20%</div>
             <span class="skill__name">React</span>
             <div class="skill__progress">
-               <div class="progress__bar" style="width: 10%;"></div>
+               <div class="progress__bar" style="width: 5%;"></div>
             </div>
-            <div class="skill__percent">10%</div>
+            <div class="skill__percent">5%</div>
          </div>
       </section>
 
@@ -351,37 +71,25 @@
          <h2 class="projects__title">Лучшие проекты</h2>
 
          <div class="projects__grid">
-            <article class="project-card">
-               <img src="./assets/img/project1.png" alt="Проект 1" class="project-card__img">
+            <article class="project-card" data-category="js">
+               <img src="./images/project1.jpg" alt="Calculator" class="project-card__img" />
                <div class="project-card__content">
-                  <h3 class="project-card__title">Landing Page</h3>
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title"> </h3>
                   <p class="project-card__desc">
-                     Одностраничный сайт для вымышленного бренда. Адаптивная вёрстка, плавные анимации и чистый код.
+                     Калькулятор реализованный на языке js.
                   </p>
-                  <a href="./pages/projects.html" class="project-card__btn button">Подробнее</a>
                </div>
             </article>
 
-            <article class="project-card">
-               <img src="./assets/img/project2.png" alt="Проект 2" class="project-card__img">
+            <article class="project-card" data-category="cpp">
+               <img src="./images/project2.jpg" alt="Checkers" class="project-card__img" />
                <div class="project-card__content">
-                  <h3 class="project-card__title">Customization Repo</h3>
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title"> Checkers</h3>
                   <p class="project-card__desc">
-                     Репозиторий на гитхабе с подробной инструкцией для настройки и кастомизации убунту в собственном
-                     стиле.
+                     Программная версия игры шашек. Написанна на C++ c использованием QT.
                   </p>
-                  <a href="./pages/projects.html" class="project-card__btn button">Подробнее</a>
-               </div>
-            </article>
-
-            <article class="project-card">
-               <img src="./assets/img/project3.png" alt="Проект 3" class="project-card__img">
-               <div class="project-card__content">
-                  <h3 class="project-card__title">Portfolio Website</h3>
-                  <p class="project-card__desc">
-                     Личный сайт-портфолио с использованием SCSS и компонентной структуры. Полностью адаптивен.
-                  </p>
-                  <a href="./pages/projects.html" class="project-card__btn button">Подробнее</a>
                </div>
             </article>
          </div>
@@ -395,10 +103,12 @@
             <p class="footer__desc">© 2025-2026 гг. Все права защищены</p>
          </li>
          <li class="footer__item">
-            <a href="https://github.com/whoaskedssselery/" class="footer__link">github.com/whoaskedssselery</a>
+            <a href="https://github.com/" class="footer__link">github.com</a>
          </li>
       </ul>
    </footer>
+
+   <script src="./scripts/main.js"></script>
 </body>
 
 </html>

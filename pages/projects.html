@@ -36,15 +36,57 @@
          <div class="projects-filter hidden" id="projects-filter">
             <form id="project-filter-form" class="projects-filter__form">
                <label><input type="radio" name="category" value="all" checked> Все проекты</label>
-               <label><input type="radio" name="category" value="layout"> Верстка</label>
-               <label><input type="radio" name="category" value="linux"> Linux / Ubuntu</label>
-               <label><input type="radio" name="category" value="portfolio"> Портфолио</label>
+               <label><input type="radio" name="category" value="html"> HTML</label>
+               <label><input type="radio" name="category" value="js"> JS</label>
+               <label><input type="radio" name="category" value="cpp"> C++</label>
                <label><input type="radio" name="category" value="practice"> Учебные</label>
             </form>
          </div>
 
          <div class="projects__grid">
-            
+            <article class="project-card" data-category="js">
+               <img src="../images/project1.jpg" alt="Calculator" class="project-card__img" />
+               <div class="project-card__content">
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title"> </h3>
+                  <p class="project-card__desc">
+                     Калькулятор реализованный на языке js.
+                  </p>
+               </div>
+            </article>
+
+            <article class="project-card" data-category="cpp">
+               <img src="../images/project2.jpg" alt="Checkers" class="project-card__img" />
+               <div class="project-card__content">
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title"> Checkers</h3>
+                  <p class="project-card__desc">
+                     Программная версия игры шашек. Написанна на C++ c использованием QT.
+                  </p>
+               </div>
+            </article>
+
+            <article class="project-card" data-category="practice html">
+               <img src="../images/project3.jpg" alt="Portfolio Website" class="project-card__img" />
+               <div class="project-card__content">
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title">Portfolio Website</h3>
+                  <p class="project-card__desc">
+                     Личный сайт-портфолио на SCSS и компонентной структуре.
+                  </p>
+               </div>
+            </article>
+
+            <article class="project-card" data-category="html js practice">
+               <img src="../images/project4.png" alt="FrontPractise" class="project-card__img" />
+               <div class="project-card__content">
+                  <a href="" target="_blank" class="visually-hidden"></a>
+                  <h3 class="project-card__title">FrontPractise</h3>
+                  <p class="project-card__desc">
+                     Учебный репозиторий с материалами и кодом по HTML, CSS, SCSS и JS.
+                  </p>
+               </div>
+            </article>
          </div>
       </section>
 
