@@ -537,6 +537,7 @@ a:hover {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 15px;
+  max-height: 500px;
 }
 .project-modal__title {
   font-size: 22px;
