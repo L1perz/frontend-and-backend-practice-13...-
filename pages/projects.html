@@ -1,117 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>PROJECTS</title>
-   <link rel="shortcut icon" href="../assets/img/logo.ico" type="image/x-icon" />
-   <link rel="stylesheet" href="../css/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>PROJECTS</title>
+  <link rel="shortcut icon" href="../assets/img/logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
-
 <body>
-   <header class="header">
-      <div class="header-wrapper">
-         <a href="../index.html" class="header__logo logo">L1per</a>
-         <nav class="nav">
-            <ul class="nav__list">
-               <li><a href="../index.html">Главная</a></li>
-               <li><a href="./projects.html" class="active">Проекты</a></li>
-               <li><a href="./dairy.html">Дневник</a></li>
-               <li><a href="./contacts.html">Контакты</a></li>
-            </ul>
-         </nav>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+  <header class="header">
+    <div class="header-wrapper">
+      <a href="../index.html" class="header__logo logo">L1per</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="./projects.html" class="active">Проекты</a></li>
+          <li><a href="./dairy.html">Дневник</a></li>
+          <li><a href="./contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="content">
+    <section class="projects container" id="projects-area">
+      <h1 class="projects__title-new">Мои проекты</h1>
+      <p class="projects__subtitle">Полная коллекция учебных и личных работ.</p>
+      <div class="projects__filter-header">
+        <button id="filter-toggle" class="button filter-btn" aria-expanded="false" aria-controls="projects-filter">Фильтры ▾</button>
       </div>
-   </header>
-
-   <main class="content">
-      <section class="projects container">
-         <h1 class="projects__title-new">Мои проекты</h1>
-         <p class="projects__subtitle">Полная коллекция учебных и личных работ.</p>
-
-         <div class="projects__filter-header">
-            <button id="filter-toggle" class="button filter-btn">Фильтры ▾</button>
-         </div>
-
-         <div class="projects-filter hidden" id="projects-filter">
-            <form id="project-filter-form" class="projects-filter__form">
-               <label><input type="radio" name="category" value="all" checked> Все проекты</label>
-               <label><input type="radio" name="category" value="html"> HTML</label>
-               <label><input type="radio" name="category" value="js"> JS</label>
-               <label><input type="radio" name="category" value="cpp"> C++</label>
-               <label><input type="radio" name="category" value="practice"> Учебные</label>
-            </form>
-         </div>
-
-         <div class="projects__grid">
-            <article class="project-card" data-category="js">
-               <img src="../images/project1.jpg" alt="Calculator" class="project-card__img" />
-               <div class="project-card__content">
-                  <a href="https://github.com/L1perz" target="_blank" class="visually-hidden"></a>
-                  <h3 class="project-card__title"> </h3>
-                  <p class="project-card__desc">
-                     Калькулятор реализованный на языке js.
-                  </p>
-               </div>
-            </article>
-
-            <article class="project-card" data-category="cpp">
-               <img src="../images/project2.jpg" alt="Checkers" class="project-card__img" />
-               <div class="project-card__content">
-                  <a href="https://github.com/L1perz" target="_blank" class="visually-hidden"></a>
-                  <h3 class="project-card__title"> Checkers</h3>
-                  <p class="project-card__desc">
-                     Программная версия игры шашек. Написанна на C++ c использованием QT.
-                  </p>
-               </div>
-            </article>
-
-            <article class="project-card" data-category="practice html">
-               <img src="../images/project3.jpg" alt="Portfolio Website" class="project-card__img" />
-               <div class="project-card__content">
-                  <a href="https://github.com/L1perz" target="_blank" class="visually-hidden"></a>
-                  <h3 class="project-card__title">Portfolio Website</h3>
-                  <p class="project-card__desc">
-                     Личный сайт-портфолио на SCSS и компонентной структуре.
-                  </p>
-               </div>
-            </article>
-
-            <article class="project-card" data-category="html js practice">
-               <img src="../images/project4.png" alt="FrontPractise" class="project-card__img" />
-               <div class="project-card__content">
-                  <a href="" target="_blank" class="visually-hidden"></a>
-                  <h3 class="project-card__title">FrontPractise</h3>
-                  <p class="project-card__desc">
-                     Учебный репозиторий с материалами и кодом по HTML, CSS, SCSS и JS.
-                  </p>
-               </div>
-            </article>
-         </div>
-      </section>
-
-   </main>
-
-   <div class="project-modal" id="project-modal">
-      <div class="project-modal__content">
-         <button class="project-modal__close" id="modal-close">×</button>
-         <img src="" alt="Скриншот проекта" class="project-modal__img" />
-         <h3 class="project-modal__title"></h3>
-         <p class="project-modal__desc"></p>
-         <a href="https://github.com/L1perz" target="_blank" class="button" id="modal-code">Исходный код</a>
+      <div class="projects-filter" id="projects-filter" role="region" aria-label="Фильтр проектов">
+        <form id="project-filter-form" class="projects-filter__form">
+          <label><input type="radio" name="category" value="all" checked> Все проекты</label>
+          <label><input type="radio" name="category" value="html"> HTML</label>
+          <label><input type="radio" name="category" value="js"> JS</label>
+          <label><input type="radio" name="category" value="cpp"> C++</label>
+          <label><input type="radio" name="category" value="practice"> Учебные</label>
+        </form>
       </div>
-   </div>
 
-   <footer class="footer">
-      <ul class="footer__menu">
-         <li>
-            <p class="footer__desc">© 2025–2026 гг. Все права защищены</p>
-         </li>
-         <li><a href="https://github.com/L1perz" class="footer__link">github.com</a></li>
-      </ul>
-   </footer>
+      <div class="projects__grid" aria-live="polite">
+        <article class="project-card" data-category="js" tabindex="0" aria-label="Калькулятор">
+          <picture>
+            <img src="../images/project1.jpg" srcset="../images/project1-300.jpg 300w, ../images/project1-400.jpg 400w, ../images/project1-600.jpg 600w" width="400" height="300" loading="lazy" alt="Calculator" class="project-card__img responsive-image">
+          </picture>
+          <div class="project-card__content">
+            <h3 class="project-card__title">Калькулятор</h3>
+            <p class="project-card__desc">Калькулятор реализованный на языке js.</p>
+            <button class="button project-card__btn" data-src="../images/project1-600.jpg" data-title="Калькулятор" data-desc="Калькулятор на JavaScript">Подробнее</button>
+          </div>
+        </article>
 
-   <script src="../scripts/main.js"></script>
+        <article class="project-card" data-category="cpp" tabindex="0" aria-label="Checkers">
+          <picture>
+            <img src="../images/project2.jpg" srcset="../images/project2-300.jpg 300w, ../images/project2-600.jpg 600w" width="400" height="300" loading="lazy" alt="Checkers" class="project-card__img responsive-image">
+          </picture>
+          <div class="project-card__content">
+            <h3 class="project-card__title">Checkers</h3>
+            <p class="project-card__desc">Программная версия игры шашек. Написанна на C++ c использованием QT.</p>
+            <button class="button project-card__btn" data-src="../images/project2-600.jpg" data-title="Checkers" data-desc="Шашки на C++ и Qt">Подробнее</button>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="practice" tabindex="0" aria-label="Portfolio Website">
+          <picture>
+            <img src="../images/project3.jpg" srcset="../images/project3-300.jpg 300w, ../images/project3-600.jpg 600w" width="400" height="300" loading="lazy" alt="Portfolio Website" class="project-card__img responsive-image">
+          </picture>
+          <div class="project-card__content">
+            <h3 class="project-card__title">Portfolio Website</h3>
+            <p class="project-card__desc">Личный сайт-портфолио на SCSS и компонентной структуре.</p>
+            <button class="button project-card__btn" data-src="../images/project3-600.jpg" data-title="Portfolio Website" data-desc="Портфолио на SCSS">Подробнее</button>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="html js practice" tabindex="0" aria-label="FrontPractise">
+          <picture>
+            <img src="../images/project4.png" srcset="../images/project4-300.png 300w, ../images/project4-400.png 400w, ../images/project4-600.png 600w" width="400" height="300" loading="lazy" alt="FrontPractise" class="project-card__img responsive-image">
+          </picture>
+          <div class="project-card__content">
+            <h3 class="project-card__title">FrontPractise</h3>
+            <p class="project-card__desc">Учебный репозиторий с материалами и кодом по HTML, CSS, SCSS и JS.</p>
+            <button class="button project-card__btn" data-src="../images/project4-600.png" data-title="FrontPractise" data-desc="Учебные практики">Подробнее</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog" aria-label="Информация о проекте">
+    <div class="project-modal__content" role="document">
+      <button class="project-modal__close" id="modal-close" aria-label="Закрыть">×</button>
+      <img src="" alt="" class="project-modal__img responsive-image" />
+      <h3 class="project-modal__title"></h3>
+      <p class="project-modal__desc"></p>
+      <a href="#" target="_blank" rel="noopener" class="button" id="modal-code">Исходный код</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <ul class="footer__menu">
+      <li>
+        <p class="footer__desc">© 2025–2026 гг. Все права защищены</p>
+      </li>
+      <li><a href="https://github.com/" class="footer__link" target="_blank" rel="noopener">github.com</a></li>
+    </ul>
+  </footer>
+
+  <div class="notification" id="notification" role="status" aria-live="polite"></div>
+
+  <script src="../scripts/main.js"></script>
 </body>
-
 </html>
