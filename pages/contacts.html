@@ -9,6 +9,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
   <header class="header">
     <div class="header-wrapper">
       <a href="../index.html" class="header__logo logo">L1per</a>
@@ -22,44 +23,82 @@
       </nav>
     </div>
   </header>
+
   <main id="main" class="content">
     <section class="contacts container">
       <h1 class="contacts__title">Контакты</h1>
       <p class="contacts__subtitle">Связаться со мной можно через форму ниже или напрямую через почту и GitHub.</p>
+
       <div class="contacts__content">
         <div class="contacts__info">
           <ul class="contacts__list">
             <li><strong>Имя:</strong> Лев</li>
             <li><strong>Группа:</strong> ЭФБО-05-24</li>
-            <li><strong>Почта:</strong> <a href="mailto:levkarchevsky@gmail.com">levkarchevsky@gmail.com</a></li>
+            <li><strong>Почта:</strong> 
+              <a href="mailto:levkarchevsky@gmail.com">levkarchevsky@gmail.com</a>
+            </li>
             <li><strong>Город:</strong> Москва</li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/" target="_blank" rel="noopener">github.com</a></li>
+            <li><strong>GitHub:</strong> 
+              <a href="https://github.com/" target="_blank" rel="noopener">github.com</a>
+            </li>
           </ul>
         </div>
+
         <form class="contacts__form" id="contact-form" aria-label="Контактная форма">
-          <div class="form__group">
-            <label for="name">Имя</label>
-            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required />
-          </div>
-          <div class="form__group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Введите ваш email" required aria-describedby="email-hint" />
-            <small id="email-hint" class="visually-hidden">Мы свяжемся по этому адресу</small>
-          </div>
-          <div class="form__group">
-            <label for="message">Сообщение</label>
-            <textarea id="message" name="message" rows="5" placeholder="Введите сообщение" required></textarea>
-          </div>
-          <button type="submit" class="form__button button">Отправить</button>
+          <fieldset>
+            <legend class="visually-hidden">Форма связи</legend>
+
+            <div class="form__group">
+              <label for="name">Имя</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Введите ваше имя" 
+                required 
+                aria-required="true"
+                aria-invalid="false"
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Введите ваш email" 
+                required 
+                aria-required="true"
+                aria-invalid="false"
+                aria-describedby="email-hint"
+              />
+              <small id="email-hint" class="visually-hidden">Введите корректный email</small>
+            </div>
+
+            <div class="form__group">
+              <label for="message">Сообщение</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                placeholder="Введите сообщение" 
+                required 
+                aria-required="true"
+                aria-invalid="false"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="form__button button">Отправить</button>
+          </fieldset>
         </form>
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <ul class="footer__menu">
-      <li>
-        <p class="footer__desc">© 2025–2026 гг. Все права защищены</p>
-      </li>
+      <li><p class="footer__desc">© 2025–2026 гг. Все права защищены</p></li>
       <li><a href="https://github.com/" class="footer__link" target="_blank" rel="noopener">github.com</a></li>
     </ul>
   </footer>
