@@ -79,57 +79,38 @@ document.addEventListener('DOMContentLoaded',function(){
       });
     });
   }
-
-  var dairyForm=document.getElementById('dairy-form');
-  var dairyTableBody=document.getElementById('dairy-table-body');
-  if(dairyForm && dairyTableBody){
-    loadTasks();
-    dairyForm.addEventListener('submit',function(e){
-      e.preventDefault();
-      var title=document.getElementById('task-title').value.trim();
-      var desc=document.getElementById('task-desc').value.trim();
-      var status=document.getElementById('task-status').value;
-      if(!title||!desc){showNotification('Заполните все поля','error');return;}
-      var tasks=getTasks();
-      tasks.push({title:title,desc:desc,status:status});
-      localStorage.setItem('dairyTasks',JSON.stringify(tasks));
-      appendTask(tasks.length,tasks[tasks.length-1]);
-      dairyForm.reset();
-      showNotification('Запись добавлена','success');
-    });
-  }
-  function getTasks(){
-    try{
-      return JSON.parse(localStorage.getItem('dairyTasks')||'[]');
-    }catch(e){
-      return[];
-    }
-  }
-  function loadTasks(){
-    var tasks=getTasks();
-    tasks.forEach(function(t,i){
-      appendTask(i+1,t);
-    });
-  }
-  function appendTask(index,task){
-    if(!dairyTableBody)return;
-    var tr=document.createElement('tr');
-    var td1=document.createElement('td');
-    td1.textContent=index;
-    var td2=document.createElement('td');
-    td2.textContent=task.title;
-    var td3=document.createElement('td');
-    td3.textContent=task.desc;
-    var td4=document.createElement('td');
-    td4.textContent=task.status;
-    if(task.status==='Выполнено')td4.classList.add('done');
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-    tr.appendChild(td4);
-    dairyTableBody.appendChild(tr);
-  }
-
+const dairyForm = document.getElementById('dairy-form');
+	const dairyTable = document.getElementById('dairy-table-body');
+	
+	if (dairyForm && dairyTable) {
+		dairyForm.addEventListener('submit', (e) => {
+			e.preventDefault();
+			
+			const title = dairyForm.querySelector('#task-title')?.value.trim();
+			const desc = dairyForm.querySelector('#task-desc')?.value.trim();
+			const status = dairyForm.querySelector('#task-status')?.value;
+			
+			if (!title || !desc) {
+				showNotification('Заполните все поля!', 'error');
+				return;
+			}
+			
+			const index = dairyTable.children.length + 1;
+			
+			dairyTable.insertAdjacentHTML(
+				'beforeend',
+				`<tr>
+          <td>${index}</td>
+          <td>${title}</td>
+          <td>${desc}</td>
+          <td class="${status === 'Выполнено' ? 'done' : ''}">${status}</td>
+        </tr>`
+			);
+			
+			showNotification('Запись добавлена!', 'success');
+			dairyForm.reset();
+		});
+	}
   var contactForm=document.getElementById('contact-form');
   if(contactForm){
     contactForm.addEventListener('submit',function(e){
